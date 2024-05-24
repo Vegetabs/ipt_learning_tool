@@ -1,0 +1,94 @@
+@font-face {
+    font-family:"ibm-dos-vga";
+    src:url("../font/ibm-dos-vga-9x16.ttf") format("truetype");
+}
+
+body {
+    background-color:black;
+    color:white;
+}
+
+body h1 {
+    font-size:50px;
+    font-family:"ibm-dos-vga";
+}
+
+body li {
+    font-size:20px;
+    font-family:"ibm-dos-vga";
+}
+
+main_content .entry_field {
+    font-size:20px;
+    font-family:"ibm-dos-vga";
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+main_content .btn {
+    font-size:20px;
+    font-family:"ibm-dos-vga";
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+main_content .msg {
+    font-size:20px;
+    font-family:"ibm-dos-vga";
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+a {
+    color:darkcyan;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align:right;
+}
+
+/*.header {
+    display:inline-flex;
+    background-color: #444444;
+    padding: 20px 10px;
+    color:white;
+    padding: 12px;
+    font-size:25px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-family:"ibm-dos-vga";
+}*/
+
+.header {
+    overflow: hidden;
+    background-color: #444444;
+    
+  }
+
+.header_title {
+    float: left;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-family:"ibm-dos-vga";
+  }
+
+.header_btns {
+    float: left;
+    color: #FFFFFF;
+    text-align:center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 80px;
+    border-radius: 4px;
+    font-family:"ibm-dos-vga";
+  }

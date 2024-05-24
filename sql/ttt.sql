@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS quiz;
+CREATE TABLE quiz (
+	quiz_id INTEGER AUTO_INCREMENT(),
+	
+	
+	PRIMARY KEY(quiz_id)
+);
