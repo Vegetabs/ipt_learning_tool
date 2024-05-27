@@ -13,9 +13,20 @@ body h1 {
     font-family:"ibm-dos-vga";
 }
 
+body h2 {
+    font-size:30px;
+    font-family:"ibm-dos-vga";
+}
+
 body li {
     font-size:20px;
     font-family:"ibm-dos-vga";
+}
+
+body p {
+    font-size:20px;
+    font-family:"ibm-dos-vga";
+    line-height:1.5;
 }
 
 main_content .entry_field {
