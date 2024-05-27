@@ -1,10 +1,25 @@
 <?php
+require("db_connect.php");
 require("header.php");
 $id=$_GET["id"];
+$conn = get_conn();
+$sql = "SELECT content FROM content WHERE page_id = $id";
+$result = mysqli_query($conn, $sql);
+if (!$result) {
+    echo "Error: Unable to execute query. " . mysqli_error($conn);
+    exit();
+}
+$content = mysqli_fetch_assoc($result);
+if (!$content) {
+    echo "No content found for the given page ID.";
+    exit();
+}
+echo $content["content"];
+mysqli_close($conn);
 ?>
 <html>
 <body>
-    <h1>--Defining The Problem--</h1>
+    <!-- <h1>--Defining The Problem--</h1>
     <p>To create a Software Solution, you need to initially identify one thing: what the problem actually is.
     This ultimately comes down to three things:</p>
     <ul>
@@ -22,7 +37,8 @@ $id=$_GET["id"];
     <h2>Limitations of the System</h2>
         <p>These are the practical limitations the system will face when put into practice, they can consist of technical and non-technical issues.</p>
         <p>Technical limitations may include: network speed, storage space, clock speed.</p>
-        <p>Non-technical limitations may include: legal concerns, participant ability and/or number.</p>
+        <p>Non-technical limitations may include: legal concerns, participant ability and/or number.</p> -->
+
 </body>
 <?php require("footer.php");?>
 </html>
