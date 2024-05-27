@@ -49,9 +49,7 @@ IF (isset($_GET["id"])) {
     <?php
     $cur_question = 1;
     $quiz_arr = unserialize($_GET["quiz_arr"]);
-    
     while ($cur_question <= count($quiz_arr)) {
-        $question_content = "";
         echo('<p>'.get_q_content($cur_question,$conn).'</p>
         <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="1">
         <label for="1">'.get_a_content(1,$conn).'</label><br>
@@ -62,9 +60,9 @@ IF (isset($_GET["id"])) {
         <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="4">
         <label for="4">'.get_a_content(4,$conn).'</label><br>');
         $cur_question += 1;
-    }
+    }    
     ?>
-    <p></p>
+    <input type="submit" value="Submit">
 </form>
 </body>
 </html
