@@ -3,6 +3,20 @@
     src:url("../font/ibm-dos-vga-9x16.ttf") format("truetype");
 }
 
+.button {
+    background-color:#444444;
+    border:none;
+    color:white;
+    padding:15px 32px;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+    font-size:16px;
+    margin:4px 2px;
+    cursor:pointer;
+    font-family:"ibm-dos-vga";
+  }
+
 body {
     background-color:black;
     color:white;

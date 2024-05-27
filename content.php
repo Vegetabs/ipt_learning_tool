@@ -38,7 +38,7 @@ mysqli_close($conn);
         <p>These are the practical limitations the system will face when put into practice, they can consist of technical and non-technical issues.</p>
         <p>Technical limitations may include: network speed, storage space, clock speed.</p>
         <p>Non-technical limitations may include: legal concerns, participant ability and/or number.</p> -->
-
+    <a href="content.php?id=<?php echo($id+1)?>" class="button">Next Page</a>
 </body>
 <?php require("footer.php");?>
 </html>
