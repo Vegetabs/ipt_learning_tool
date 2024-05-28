@@ -21,8 +21,8 @@ FUNCTION get_q_content($id, $conn) {
     return $content["q_content"];
 }
 
-FUNCTION get_a_content($id, $conn) {
-    $sql = "SELECT a_content FROM quiz_answers WHERE a_id=$id";
+FUNCTION get_a_content($q_id,$a_id,$conn) {
+    $sql = "SELECT a_content FROM quiz_answers WHERE q_id=$q_id AND a_id=$a_id";
     $result = mysqli_query($conn, $sql);
     $content = mysqli_fetch_assoc($result);
     return $content["a_content"];
@@ -38,7 +38,7 @@ IF (isset($_GET["id"])) {
     $topic_id = $_GET["id"];
     $quiz_arr = create_quiz_arr($topic_id,$conn);
     $quiz_str = serialize($quiz_arr);
-    header("Location: quiz.php?quiz_arr=$quiz_str");
+    header("Location: quiz.php?topic_id=$topic_id&quiz_arr=$quiz_str");
     exit;
 }
 ?>
@@ -52,16 +52,19 @@ IF (isset($_GET["id"])) {
     while ($cur_question <= count($quiz_arr)) {
         echo('<p>'.get_q_content($cur_question,$conn).'</p>
         <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="1">
-        <label for="1">'.get_a_content(1,$conn).'</label><br>
+        <label for="1">'.get_a_content($cur_question,1,$conn).'</label><br>
         <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="2">
-        <label for="2">'.get_a_content(2,$conn).'</label><br>
+        <label for="2">'.get_a_content($cur_question,2,$conn).'</label><br>
         <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="3">
-        <label for="3">'.get_a_content(3,$conn).'</label><br>
+        <label for="3">'.get_a_content($cur_question,3,$conn).'</label><br>
         <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="4">
-        <label for="4">'.get_a_content(4,$conn).'</label><br>');
+        <label for="4">'.get_a_content($cur_question,4,$conn).'</label><br>');
         $cur_question += 1;
-    }    
+    }
+    $topic_id = $_GET["topic_id"];
+    echo('<input type="hidden" name="topic_id" value="'.$topic_id.'">');   
     ?>
+    
     <input type="submit" value="Submit">
 </form>
 </body>
