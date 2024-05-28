@@ -21,9 +21,6 @@ FUNCTION check_answer($answer,$conn) {
 <html>
 <body>
     <?php
-    // foreach($_GET as $query_string_variable => $value) {
-    //     print("$query_string_variable  = $value <Br />");
-    //  }
     $q_num = 1;
     while ($q_num <= count($_GET)) {
         $answer = check_answer($_GET[strval($q_num)],$conn);
@@ -32,8 +29,11 @@ FUNCTION check_answer($answer,$conn) {
         }
         $q_num += 1;
     }
-    echo($correct);
     ?>
+    <h1>Results of Quiz:</h1>
+    <p>Congrats you got <?php echo($correct."/10") ?>!</p>
+    <p>Would you like to return home?</p>
+    <a href="index.php" class="button">Home</a>
 </body>
 <?php require("footer.php"); ?>
 </html>
