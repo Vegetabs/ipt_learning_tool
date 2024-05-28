@@ -65,4 +65,5 @@ IF (isset($_GET["id"])) {
     <input type="submit" value="Submit">
 </form>
 </body>
+<?php require("footer.php"); ?>
 </html
