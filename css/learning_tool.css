@@ -32,6 +32,11 @@ body h2 {
     font-family:"ibm-dos-vga";
 }
 
+body h3 {
+    font-size:25px;
+    font-family:"ibm-dos-vga";
+}
+
 body li {
     font-size:20px;
     font-family:"ibm-dos-vga";
@@ -52,6 +57,14 @@ body input {
     font-size:20px;
     font-family:"ibm-dos-vga";
     line-height:1.5;
+}
+
+body img {
+    width:350px;
+    padding-top:10px;
+    padding-bottom:10px;
+    height: auto;
+    display:block;
 }
 
 main_content .entry_field {
