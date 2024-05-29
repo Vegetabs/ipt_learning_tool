@@ -1,22 +1,23 @@
 <?php
 require("db_connect.php");
+require("session_check.php");
 require("header.php");
 $id=0;
 
-FUNCTION send_q_data($quiz_id,$num_correct,$conn) {
-    $user_name = $_SESSION["user_name"];
-    $sql = "INSERT INTO user_prog (user_name,topic_id,num_correct)
+FUNCTION send_q_data($conn) {
+    $user_name = '"'.$_SESSION["user_name"].'"';
+    $sql = "DELETE FROM user_prog WHERE user_name=$user_name";
+    mysqli_query($conn,$sql);
+    $quiz_id = $_GET["id"];
+    $num_correct = $_GET["num_correct"];
+    $sql = "INSERT INTO user_prog
     VALUES ($user_name,$quiz_id,$num_correct)";
-    IF ($conn->query($sql) === TRUE) {
-        echo "record inserted successfully";
-    } ELSE {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    mysqli_query($conn,$sql);
 }
 
 IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
     $conn = get_conn();
-    send_q_data($_GET["id"],$_GET["num_correct"],$conn);
+    send_q_data($conn);
 }
 ?>
 

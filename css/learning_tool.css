@@ -43,6 +43,17 @@ body p {
     line-height:1.5;
 }
 
+body label {
+    font-size:20px;
+    font-family:"ibm-dos-vga";
+}
+
+body input {
+    font-size:20px;
+    font-family:"ibm-dos-vga";
+    line-height:1.5;
+}
+
 main_content .entry_field {
     font-size:20px;
     font-family:"ibm-dos-vga";

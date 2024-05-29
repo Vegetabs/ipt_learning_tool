@@ -12,6 +12,8 @@ $method  = $_SERVER["REQUEST_METHOD"];
 IF ($method=="POST") {
     $user_name = $_POST["user_name"];
     $password = $_POST["password"];
+    echo("user_name: ".$user_name);
+    echo("password: ".$password);
     try {
         // Connect to database using the User Name and Password entered
         $conn = get_conn(); #login is checked
