@@ -75,7 +75,7 @@ mysqli_close($conn);
             <!-- src https://www.lucidchart.com/pages/data-flow-diagram/how-to-make-a-dfd -->
             <img src="img\history-of-dataflow-diagrams.png" alt="data flow diagram 2">
             <!-- src https://www.smartdraw.com/data-flow-diagram/ -->
-    <h2>Data Dictionaries</2>
+    <h2>Data Dictionaries</h2>
         <p>Data dictionaries are tables used to outline the characteristics of the data used within the system.
         This data is outlined in various columns, which in the SDD subject consist of:</p>
         <ul>
@@ -88,16 +88,42 @@ mysqli_close($conn);
             <li>Example</li>
             <li>Validation</li>
         </ul>
-        <h3>Exmaples of Data Dictionaries</h3>
-            <img src="" alt="">
-            <img src="" alt="">
+        <p></p>
+            <img src="img\data_dict.jpg" alt="data dictionary table">
+            <!-- src https://www.youtube.com/watch?app=desktop&v=MdMsjxT-EoU&ab_channel=ChristopherKalodikis -->
+    <h2>IPO Diagrams</h2>
+        <p>IPO diagrams are tables used to outline business processes, with focus on the data entering and exiting the process.</p>
+        <img src="img\IPO_diagram.jpg" alt="ipo table">
+        <!-- src https://www.youtube.com/watch?app=desktop&v=a10a11oxjrA&ab_channel=ChristopherKalodikis -->
     <!-- Insert section about data oriented diagrams -->
-    <p></p>
+    <p>With these data-oriented models in mind, you will also need to know models for system functionality.
+    These models include:</p>
     <ul>
         <li>Structure Charts</li>
         <li>System Flowcharts</li>
         <li>Storyboards</li>
     </ul>
+    <h2>Structure Charts</h2>
+        <p></p>
+        <h3>Structure Chart Examples</h3>
+            <img src="img\CPT-Structured_Chart_Example.svg.png" alt="structure chart 1">
+            <!-- src https://en.wikipedia.org/wiki/Structure_chart -->
+            <img src="img\struct_chart.jpg" alt="struct chart 2">
+            <!-- src https://www.youtube.com/watch?v=QN2bjNplGlQ&ab_channel=ChristopherKalodikis -->
+    <h2>System Flowcharts</h2>
+        <p></p>
+        <h3>System Flowchart Examples</h3>
+            <img src="img\system_flow1.png" alt="system flowchart 1">
+            <!-- src https://www.zenflowchart.com/guides/system-flowchart -->
+            <img src="img\system_flow2.png" alt="system flowchart 2">
+            <!-- src https://www.zenflowchart.com/guides/system-flowchart -->
+    <h2>Storyboards</h2>
+        <p></p>
+        <h3>Storyboard Examples</h3>
+            <img src="img\storyboard1.PNG" alt="storyboard 1">
+            <!-- src https://careerfoundry.com/en/blog/ui-design/best-storyboard-examples/ -->
+            <img src="img\storyboard2.PNG" alt="storyboard 2">
+            <!-- src https://www.visual-paradigm.com/guide/ux-design/wireframe-vs-storyboard-vs-wireflow-vs-mockup-vs-prototyping/ -->
     <!-- Insert section about system functionality models -->
     <a href="content.php?id=<?php echo($id+1)?>" class="button">Next Page</a>
 </body>
