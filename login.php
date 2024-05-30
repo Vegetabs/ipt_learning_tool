@@ -12,8 +12,6 @@ $method  = $_SERVER["REQUEST_METHOD"];
 IF ($method=="POST") {
     $user_name = $_POST["user_name"];
     $password = $_POST["password"];
-    echo("user_name: ".$user_name);
-    echo("password: ".$password);
     try {
         // Connect to database using the User Name and Password entered
         $conn = get_conn(); #login is checked
@@ -55,8 +53,19 @@ IF ($method=="POST") {
         //echo("Error: ".$e->getMessage());
     }
 }
-require('header.php');
+
 ?>
+<head>
+    <link rel="stylesheet" href="css\learning_tool.css">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDLC Navigator</title>
+</head>
+<div class="header">
+    <div class="header_title">
+        <h1>--SDLC Navigator--</h1>
+    </div>
+</div>
 <main_content>
 <h1>Login Page</h1>
 <div>

@@ -32,7 +32,7 @@ IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
             </ul>
         <li>Planning and Designing Software Solutions</li>
             <ul>
-                <li><a href="content.php">Creating Psuedocode</a></li>
+                <li><a href="content.php?id=3">Creating Psuedocode</a></li>
                 <li><a href="quiz.php?id=2">Topic Test</a></li>
             </ul>
         <li>Implementation of Software Solutions</li>

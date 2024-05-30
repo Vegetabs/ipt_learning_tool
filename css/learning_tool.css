@@ -48,6 +48,10 @@ body p {
     line-height:1.5;
 }
 
+body code {
+    white-space:pre;
+}
+
 body label {
     font-size:20px;
     font-family:"ibm-dos-vga";
