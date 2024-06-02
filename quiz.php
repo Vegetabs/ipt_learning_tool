@@ -15,18 +15,18 @@ FUNCTION create_quiz_arr($id, $conn) {
 }
 
 FUNCTION get_q_content($id, $conn) {
-    $sql = "SELECT q_content FROM quiz_question WHERE q_id=$id";
+    $sql = "SELECT question_content FROM quiz_question WHERE question_id=$id";
     $result = mysqli_query($conn, $sql);
     $content = mysqli_fetch_assoc($result);
-    return $content["q_content"];
+    return $content["question_content"];
 }
 
-FUNCTION get_a_content($q_id,$conn) {
-    $sql = "SELECT a_content FROM quiz_answers WHERE q_id=$q_id";
+FUNCTION get_a_content($question_id,$conn) {
+    $sql = "SELECT answer_content FROM quiz_answers WHERE question_id=$question_id";
     $result = mysqli_query($conn, $sql);
     $a_arr = [];
     while ($row = mysqli_fetch_assoc($result)){
-        $a_arr[] = $row["a_content"];
+        $a_arr[] = $row["answer_content"];
     }
     return $a_arr;
 }
