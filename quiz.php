@@ -50,9 +50,11 @@ IF (isset($_GET["id"])) {
 <body>
 <form action="results.php">
     <?php
-    $cur_question = 1;
     $quiz_arr = unserialize($_GET["quiz_arr"]);
-    while ($cur_question <= count($quiz_arr)) {
+    foreach ($quiz_arr as $i) {
+        echo("$i<br>");
+    }
+    foreach ($quiz_arr as $cur_question) {
         $a_arr = get_a_content($cur_question,$conn);
         echo('<p>'.get_q_content($cur_question,$conn).'</p>
         <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="1">

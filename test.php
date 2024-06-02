@@ -90,7 +90,7 @@
         <h3>Structure Chart Examples</h3>
             <!-- <img src="img\CPT-Structured_Chart_Example.png" alt="structure chart 1">
             src https://en.wikipedia.org/wiki/Structure_chart -->
-            <img src="img\struct_chart.jpg" alt="struct chart 2">
+            <img src="img\struct_chart.jpg" alt="struct chart 1">
             <!-- src https://www.youtube.com/watch?v=QN2bjNplGlQ&ab_channel=ChristopherKalodikis -->
     <h2>System Flowcharts</h2>
         <p>System flowcharts act as a graphical representation of the flow of information between a system's processes.
