@@ -3,7 +3,6 @@
     IF (isset($_SESSION["user_name"])) {
         $log_btn = "Logout";
     }
-    $cur_max_pages = 3;
 ?>
 
 <!DOCTYPE html>

@@ -266,4 +266,5 @@ PRINT sort_selection(arr)
                 It will repeatedley iterate through the list and swap the current value with the next one if it's greater, this continues until it's unable to swap anything.
                 Due to how bubble sort works it will always require an extra parse at the end of the sorting process to check if it's sorted.</p>
                 <code>function sort_bubble(array)<br>    swap = false<br>    while swap == true:<br>        swap = false<br>        for i to length(array)-1<br>            if array[i] > array[i+1] AND i < length(array)-1:<br>                swap(array[i],array[i+1])<br>                swap = true<br>            end if<br>        end for<br>    end while<br>    return array<br>end function</code>
-    <p></p>
+        <h2>Psuedocode Revision Document</h2>
+            <p>If you feel </p>

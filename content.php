@@ -1,6 +1,7 @@
 <?php
 require("db_connect.php");
 require("header.php");
+
 $id=$_GET["id"];
 $conn = get_conn();
 $sql = "SELECT content FROM content WHERE page_id = $id";
@@ -19,7 +20,16 @@ mysqli_close($conn);
 ?>
 <html>
 <body>
-    <a href="content.php?id=<?php echo($id+1)?>" class="button">Next Page</a>
+    <?php 
+    $cur_max_pages = 3;
+    IF ($id+1 <= $cur_max_pages) {
+        $next = $id + 1;
+        $next_page = "content.php?id=$next";
+    } ELSE {
+        $next_page = "index.php";
+    }
+    ?>
+    <a href="<?php echo($next_page)?>" class="button">Next Page</a>
 </body>
 <?php require("footer.php");?>
 </html>
