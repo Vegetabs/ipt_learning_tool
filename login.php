@@ -17,6 +17,7 @@ IF ($method=="POST") {
         $conn = get_conn(); #login is checked
         // Once connected as valid user , then get User table to get first name and last name
         $sql = "SELECT first_name, last_name FROM users WHERE user_name = ?";
+        echo($sql.$user_name);
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s",$user_name);
         //Executing the statement
@@ -49,7 +50,7 @@ IF ($method=="POST") {
         }
     } catch (Exception $e) {
         $message = "Error: ".$e->getMessage();
-        $message = "Invalid Username or Password";
+        $message .= "REALLY Invalid Username or Password";
         //echo("Error: ".$e->getMessage());
     }
 }

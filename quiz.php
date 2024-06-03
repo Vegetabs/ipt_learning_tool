@@ -51,9 +51,9 @@ IF (isset($_GET["id"])) {
 <form action="results.php">
     <?php
     $quiz_arr = unserialize($_GET["quiz_arr"]);
-    foreach ($quiz_arr as $i) {
-        echo("$i<br>");
-    }
+    // foreach ($quiz_arr as $i) {
+    //     echo("$i<br>");
+    // }
     foreach ($quiz_arr as $cur_question) {
         $a_arr = get_a_content($cur_question,$conn);
         echo('<p>'.get_q_content($cur_question,$conn).'</p>

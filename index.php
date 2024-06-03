@@ -5,13 +5,13 @@ require("header.php");
 $id=0;
 
 FUNCTION send_q_data($conn) {
-    $user_name = '"'.$_SESSION["user_name"].'"';
-    $sql = "DELETE FROM user_prog WHERE user_name=$user_name";
+    $topic_id = $_GET["id"];
+    $sql = "DELETE FROM user_prog WHERE topic_id=$topic_id";
     mysqli_query($conn,$sql);
-    $quiz_id = $_GET["id"];
+    $user_name = '"'.$_SESSION["user_name"].'"';
     $num_correct = $_GET["num_correct"];
-    $sql = "INSERT INTO user_prog
-    VALUES ($user_name,$quiz_id,$num_correct)";
+    $sql = "INSERT INTO user_prog (topic_id,user_name,num_correct)
+    VALUES ($topic_id,$user_name,$num_correct)";
     mysqli_query($conn,$sql);
 }
 

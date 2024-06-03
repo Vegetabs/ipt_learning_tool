@@ -1,9 +1,9 @@
 <?php
 function get_conn() {
     // define constants - cannot be changed by code
-    define("dbserver", $_SERVER['SERVER_NAME']);
-    define("dbusername", "murp31");
-    define("dbpassword", "murp31");
+    define("dbserver", "spx-webtest-s01");
+    define("dbusername", "MURP31");
+    define("dbpassword", "MURP31");
     define("dbname", "murp31db");
     $conn = new mysqli(dbserver, dbusername, dbpassword, dbname);
     // Check connection
