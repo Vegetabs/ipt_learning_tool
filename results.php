@@ -26,6 +26,11 @@ FUNCTION check_answer($answer,$question,$conn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDLC Learning Tool</title>
 </head>
+<div class="header">
+    <div class="header_title">
+        <h1>--SDLC Navigator--</h1>
+    </div>
+</div>
 <body>
     <?php
     $q_num = 1;

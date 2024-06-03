@@ -78,7 +78,7 @@ IF ($method=="POST") {
             </div>
             <div class="form-group row">
                 <label for "password" class="form-label">Password: </label>
-                <input class="form-control" name="password" type="password" size="12"required></input>
+                <input class="form-control" name="password" type="password" size="10"required></input>
             </div>
         </div>
         <div class=btn>
