@@ -64,7 +64,7 @@ IF ($method=="POST") {
 </head>
 <div class="header">
     <div class="header_title">
-        <h1>--SDLC Navigator--</h1>
+        <h1>SDLC Navigator</h1>
     </div>
 </div>
 <main_content>
