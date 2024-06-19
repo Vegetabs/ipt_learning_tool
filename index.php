@@ -44,12 +44,17 @@ IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
         <li>Testing Software Solutions</li>
             <ul>
                 <li><a href="content.php?id=6">Testing Methods</a></li>
+                <li><a href="quiz.php?id=4">Topic Test</a></li>
             </ul>    
         <li>Maintaining Software Solutions</li>
             <ul>
                 <li><a href="content.php?id=7">How to Maintain Software</a></li>
+                <li><a href="quiz.php?id=5">Topic Test</a></li>
             </ul>    
-        <li><a href="bibliography.php">Bibiliography</a></li>
+        <li>Misc</li>
+            <ul>
+                <li><a href="bibliography.php">Bibiliography</a></li>
+            </ul>    
     </ul>
     <h1>Introduction</h1>
     <p>Welcome to the 'SDLC navigator' learning tool!
