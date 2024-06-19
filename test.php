@@ -354,4 +354,47 @@ PRINT sort_selection(arr)
         <li>Volume of data</li>
         <li>Effect of system on external environment</li>
     </ul>
-    
+
+<h1>Maintaining Software Solutions</h1> <p>This section will discuss how to maintain software software solutions effectively and efficently. This is important as when designing a software solution various issues may occur after the finalised implementation of the system. These issues must be addressed in a appropriate manner in order to maintain the functionality of the system.</p> <h3>Why do systems need to be maintained?</h3> <p>The need for maintaining code can have various reasons, although the most common include:</p> <ul> <li>Changing of user requirements</li> <li>Changes in data structure of the program and/or surrounding systems</li> <li>Availability of new hardware and/or software</li> <li>Changing business requiremnts</li> <li>Poor initial implementations</li> </ul> <p>To perform this maintainance a developer must complete certain steps, including:</p> <h3>Identifying Reasons for Maintainance</h3> <p>What catagory of maintanace will be used?</p> <ul> <li>Corrective: fixing errors and bugs</li> <li>Adaptive: adjusting software to fit with changing requirements</li> <li>Improvement: adding new functionality to system</li> </ul> <h3>Determining Changes</h3> <p>What is the nature of the changes?</p> <ul> <li>Priority: how urgent the change is</li> <li>Extent: how significant the change to the system is</li> <li>Personnel: who will be assigned to maintainance</li> </ul> <h3>Implmenting Changes</h3> <p>Program needs to be changed and tested to ensure changes work appropriately and efficiently in conjunction with the origin system.</p> <h3>Documenting Changes</h3> <ul> <li>Changes must be documented to the same degree as the original</li> <li>Documentation must remain consistent in form</li> </ul> <p>Keep in mind various case tools can be used in the maintainance process, including:</p> <ul> <li>Versioning: git and other versioning tools can be used to record changes to the system</li> <li>Testing: test data used to test changes can be automatically generated</li> <li>Data: changes to data structures can be done using data dictionary tools</li> </ul>
+
+<h1>Maintaining Software Solutions</h1>
+    <p>This section will discuss how to maintain software software solutions effectively and efficently.
+    This is important as when designing a software solution various issues may occur after the finalised implementation of the system.
+    These issues must be addressed in a appropriate manner in order to maintain the functionality of the system.</p>
+    <h3>Why do systems need to be maintained?</h3>
+    <p>The need for maintaining code can have various reasons, although the most common include:</p>
+        <ul>
+            <li>Changing of user requirements</li>
+            <li>Changes in data structure of the program and/or surrounding systems</li>
+            <li>Availability of new hardware and/or software</li>
+            <li>Changing business requiremnts</li>
+            <li>Poor initial implementations</li>
+        </ul>
+    <p>To perform this maintainance a developer must complete certain steps, including:</p>
+    <h3>Identifying Reasons for Maintainance</h3>
+        <p>What catagory of maintanace will be used?</p>    
+        <ul>
+            <li>Corrective: fixing errors and bugs</li>
+            <li>Adaptive: adjusting software to fit with changing requirements</li>
+            <li>Improvement: adding new functionality to system</li>
+        </ul>
+    <h3>Determining Changes</h3>
+        <p>What is the nature of the changes?</p>
+        <ul>
+            <li>Priority: how urgent the change is</li>
+            <li>Extent: how significant the change to the system is</li>
+            <li>Personnel: who will be assigned to maintainance</li>
+        </ul>
+    <h3>Implmenting Changes</h3>
+        <p>Program needs to be changed and tested to ensure changes work appropriately and efficiently in conjunction with the origin system.</p>
+    <h3>Documenting Changes</h3>
+        <ul>
+            <li>Changes must be documented to the same degree as the original</li>
+            <li>Documentation must remain consistent in form</li>
+        </ul>
+    <p>Keep in mind various case tools can be used in the maintainance process, including:</p>
+    <ul>
+        <li>Versioning: git and other versioning tools can be used to record changes to the system</li>
+        <li>Testing: test data used to test changes can be automatically generated</li>
+        <li>Data: changes to data structures can be done using data dictionary tools</li>
+    </ul>

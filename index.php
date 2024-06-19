@@ -47,7 +47,7 @@ IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
             </ul>    
         <li>Maintaining Software Solutions</li>
             <ul>
-                <li><a href="">[Insert Page]</a></li>
+                <li><a href="content.php?id=7">How to Maintain Software</a></li>
             </ul>    
         <li><a href="bibliography.php">Bibiliography</a></li>
     </ul>
