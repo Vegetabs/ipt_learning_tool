@@ -39,12 +39,11 @@ IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
             <ul>
                 <li><a href="content.php?id=4">Translation Methods</a></li>
                 <li><a href="content.php?id=5">Documenting Syntax</a></li>
-                <li><a href="content.php?id=6">Practical Examples</a></li>
                 <li><a href="quiz.php?id=3">Topic Test</a></li>
             </ul>
         <li>Testing Software Solutions</li>
             <ul>
-                <li><a href="">[Insert Page]</a></li>
+                <li><a href="content.php?id=6">Testing Methods</a></li>
             </ul>    
         <li>Maintaining Software Solutions</li>
             <ul>

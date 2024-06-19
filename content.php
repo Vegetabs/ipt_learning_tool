@@ -21,7 +21,7 @@ mysqli_close($conn);
 <html>
 <body>
     <?php 
-    $cur_max_pages = 4;
+    $cur_max_pages = 6;
     IF ($id+1 <= $cur_max_pages) {
         $next = $id + 1;
         $next_page = "content.php?id=$next";

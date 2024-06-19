@@ -281,7 +281,7 @@ PRINT sort_selection(arr)
     <iframe width="560" height="315" src="https://www.youtube.com/embed/1rd9TP692AM?si=vLfu2FDiOUwV2yuG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <p></p> -->
 
-<h1>Documenting Syntax</h1> <p>This section will discuss the primary models for documenting the syntax of programming languages, these being ENBF and Railroad diagrams. But before exploring these models we must first understand some specific terminology, which can be seen below:</p> <ul> <li>Terminal: a set of symbols or characters, e.g. "abc" or "123"</li> <li>Non-terminal: an expression which is defined elsewhere</li> </ul> <h3>EBNF</h3> <p>Extended Backus-Naur Form (EBNF) is a text-based notation format for describing programming language syntax and data structures. The various concepts within EBNF are represented as:</p> <ul> <li>Terminals: value within ""</li> <li>Non-terminals: named within <></li> <li>Optionals: expressions within [] are optional</li> <li>Repetition: expresions within {} are repeated 0-to-many times</li> <li>Grouping: expressions within () are grouped together</li> <li>Alternatives: expressions next to | show a choice between alternatives</li> <li>Assignment: to assign an expression ::= is used</li> </ul> <p>To better understand these notations view the example below:</p> <code>&lt;variable&gt; ::= &lt;letter&gt;[&lt;digit&gt;{&lt;digit&gt;}]<br>&lt;letter&gt; ::= a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z<br>&lt;digit&gt; ::= 0|1|2|3|4|5|6|7|8|9</code> <p>In this example a variable is definied as a single letter and optionally 1-to-many digits. An example of variable in this case would be "a282".</p>
+<h1>Documenting Syntax</h1> <p>This section will discuss the primary models for documenting the syntax of programming languages, these being ENBF and Railroad diagrams. But before exploring these models we must first understand some specific terminology, which can be seen below:</p> <ul> <li>Terminal: a set of symbols or characters, e.g. "abc" or "123"</li> <li>Non-terminal: an expression which is defined elsewhere</li> </ul> <h3>EBNF</h3> <p>Extended Backus-Naur Form (EBNF) is a text-based notation format for describing programming language syntax and data structures. The various concepts within EBNF are represented as:</p> <ul> <li>Terminals: value within ""</li> <li>Non-terminals: named within <></li> <li>Optionals: expressions within [] are optional</li> <li>Repetition: expresions within {} are repeated 0-to-many times</li> <li>Grouping: expressions within () are grouped together</li> <li>Alternatives: expressions next to | show a choice between alternatives</li> <li>Assignment: to assign an expression ::= is used</li> </ul> <p>To better understand these notations view the example below:</p> <code>&lt;variable&gt; ::= &lt;letter&gt;[&lt;digit&gt;{&lt;digit&gt;}]<br>&lt;letter&gt; ::= a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z<br>&lt;digit&gt; ::= 0|1|2|3|4|5|6|7|8|9</code> <p>In this example a variable is definied as a single letter and optionally 1-to-many digits. An example of a variable in this case would be "a282".</p> <h3>Railroad Diagrams</h3> <p>Railroad Diagrams similarily to EBNF document the syntax of a language or data structure, however they differ in that they are visual in nature rather than text-based. An image presenting the various elements of a railroad diagram can be seen below:</p> <img src="img\railroad_key.png" alt="railroad diagram key"> <p>To better understand the nature of railroad diagrams view the examples below:</p> <img src="img\SyntaxDiag1.png" alt="first syntax diagram"> <img src="img\SyntaxDiag2.png" alt="second syntax diagram">
 
 <h1>Documenting Syntax</h1>
     <p>This section will discuss the primary models for documenting the syntax of programming languages, these being ENBF and Railroad diagrams.
@@ -313,3 +313,45 @@ PRINT sort_selection(arr)
         <p>To better understand the nature of railroad diagrams view the examples below:</p>
         <img src="img\SyntaxDiag1.png" alt="first syntax diagram">
         <img src="img\SyntaxDiag2.png" alt="second syntax diagram">
+
+<h1>Testing Software Solutions</h1> <p>This section will discuss the process of testing software solutions, in terms of the methods to test software and the levels of testing. This information, and testing software in general, is important when designing software as it allows the developer to check if the initial requirements of the system have been met. With this in mind, the two kinds of testing include:</p> <h3>Black Box</h3> <ul> <li>Inputs and expected outputs of the system are known</li> <li>Processes occuring within the system are unknown</li> <li>Also known as functional testing</li> </ul> <h3>White Box</h3> <ul> <li>Explicit knowledge of internal workings of item being tested is known</li> <li>Also known as structural testing</li> </ul> <p>These different kind of testing consist of various levels including:</p> <h3>Module</h3> <ul> <li>Each module/subroutine of system is tested to check if it functions correctly</li> <li>Drivers are used for this testing</li> </ul> <h3>Program</h3> <ul> <li>The entire program is tested, including modules and subroutines, to find if everything is functioning</li> </ul> <h3>System</h3> <ul> <li>The entire system is tested, including all programs in the suite, to ensure proper functioning</li> <li>UI/interfaces are also included in testing</li> </ul> <p>To facilitate these testing methods good testing data must be used; testing data should ensure system is tested for:</p> <ul> <li>Large file sizes</li> <li>Mix of transaction types</li> <li>Response Times</li> <li>Volume of data</li> <li>Effect of system on external environment</li> </ul>
+        
+<h1>Testing Software Solutions</h1>
+    <p>This section will discuss the process of testing software solutions, in terms of the methods to test software and the levels of testing.
+    This information, and testing software in general, is important when designing software as it allows the developer to check if the initial requirements of the system have been met.
+    With this in mind, the two kinds of testing include:</p>
+    <h3>Black Box</h3>
+        <ul>
+            <li>Inputs and expected outputs of the system are known</li>
+            <li>Processes occuring within the system are unknown</li>
+            <li>Also known as functional testing</li>
+        </ul>
+    <h3>White Box</h3>
+        <ul>
+            <li>Explicit knowledge of internal workings of item being tested is known</li>
+            <li>Also known as structural testing</li>
+        </ul>
+    <p>These different kind of testing consist of various levels including:</p>
+    <h3>Module</h3>
+        <ul>
+            <li>Each module/subroutine of system is tested to check if it functions correctly</li>
+            <li>Drivers are used for this testing</li>
+        </ul>
+    <h3>Program</h3>
+        <ul>
+            <li>The entire program is tested, including modules and subroutines, to find if everything is functioning</li>
+        </ul>
+    <h3>System</h3>
+        <ul>
+            <li>The entire system is tested, including all programs in the suite, to ensure proper functioning</li>
+            <li>UI/interfaces are also included in testing</li>
+        </ul>
+    <p>To facilitate these testing methods good testing data must be used; testing data should ensure system is tested for:</p>
+    <ul>
+        <li>Large file sizes</li>
+        <li>Mix of transaction types</li>
+        <li>Response Times</li>
+        <li>Volume of data</li>
+        <li>Effect of system on external environment</li>
+    </ul>
+    
