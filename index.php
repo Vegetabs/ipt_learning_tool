@@ -35,12 +35,16 @@ IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
                 <li><a href="content.php?id=3">Creating Psuedocode</a></li>
                 <li><a href="quiz.php?id=2">Topic Test</a></li>
             </ul>
-        <li><a href="bibliography.php">Bibiliography</a></li>
-        <!--
-        <li>Implementation of Software Solutions</li>
-        <li>Testing and Evaluating Software Solutions</li>
+        <li>Implementing Software Solutions</li>
+            <ul>
+                <li><a href="content.php?id=4">Translation Methods</a></li>
+                <li><a href="content.php?id=5">Documenting Syntax</a></li>
+                <li><a href="content.php?id=6">Practical Examples</a></li>
+                <li><a href="quiz.php?id=3">Topic Test</a></li>
+            </ul>
+        <li>Testing Software Solutions</li>
         <li>Maintaining Software Solutions</li>
-        -->
+        <li><a href="bibliography.php">Bibiliography</a></li>
     </ul>
     <h1>Introduction</h1>
     <p>Welcome to the 'SDLC navigator' learning tool!

@@ -1,7 +1,7 @@
 <?php
 function get_conn() {
     // define constants - cannot be changed by code
-    define("dbserver", "spx-webtest-s01");
+    define("dbserver", $_SERVER["SERVER_NAME"]);
     define("dbusername", "MURP31");
     define("dbpassword", "MURP31");
     define("dbname", "murp31db");

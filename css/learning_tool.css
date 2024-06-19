@@ -3,6 +3,37 @@
     src:url("../font/ibm-dos-vga-9x16.ttf") format("truetype");
 }
 
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+.nav li {
+    float: left;
+}
+  
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.nav li a:hover {
+    background-color: #111;
+}
+
+.login_container {
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 .button {
     background-color:#444444;
     border:none;
@@ -20,6 +51,9 @@
 body {
     background-color:black;
     color:white;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:10px;
 }
 
 body h1 {
@@ -92,8 +126,9 @@ main_content .msg {
     padding-bottom:10px;
 }
 
-a {
+body a {
     color:darkcyan;
+    text-decoration: none;
 }
 
 .center {
@@ -119,13 +154,12 @@ a {
 .header {
     overflow: hidden;
     background-color: #444444;
-    
   }
 
 .header_title {
-    float: left;
+    float: center;
     color: #FFFFFF;
-    text-align: left;
+    text-align: center;
     padding: 20px;
     text-decoration: none;
     font-size: 40px;

@@ -17,7 +17,6 @@ IF ($method=="POST") {
         $conn = get_conn(); #login is checked
         // Once connected as valid user , then get User table to get first name and last name
         $sql = "SELECT first_name, last_name FROM users WHERE user_name = ?";
-        echo($sql.$user_name);
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s",$user_name);
         //Executing the statement
@@ -68,8 +67,8 @@ IF ($method=="POST") {
     </div>
 </div>
 <main_content>
-<h1>Login Page</h1>
-<div>
+<div class="login_container">
+    <h1>Login Page</h1>
     <form  name="login" action="" method="POST">
         <div class="entry_field">
             <div class="mb-3 mt-3">
