@@ -281,4 +281,35 @@ PRINT sort_selection(arr)
     <iframe width="560" height="315" src="https://www.youtube.com/embed/1rd9TP692AM?si=vLfu2FDiOUwV2yuG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <p></p> -->
 
-<h1>
+<h1>Documenting Syntax</h1> <p>This section will discuss the primary models for documenting the syntax of programming languages, these being ENBF and Railroad diagrams. But before exploring these models we must first understand some specific terminology, which can be seen below:</p> <ul> <li>Terminal: a set of symbols or characters, e.g. "abc" or "123"</li> <li>Non-terminal: an expression which is defined elsewhere</li> </ul> <h3>EBNF</h3> <p>Extended Backus-Naur Form (EBNF) is a text-based notation format for describing programming language syntax and data structures. The various concepts within EBNF are represented as:</p> <ul> <li>Terminals: value within ""</li> <li>Non-terminals: named within <></li> <li>Optionals: expressions within [] are optional</li> <li>Repetition: expresions within {} are repeated 0-to-many times</li> <li>Grouping: expressions within () are grouped together</li> <li>Alternatives: expressions next to | show a choice between alternatives</li> <li>Assignment: to assign an expression ::= is used</li> </ul> <p>To better understand these notations view the example below:</p> <code>&lt;variable&gt; ::= &lt;letter&gt;[&lt;digit&gt;{&lt;digit&gt;}]<br>&lt;letter&gt; ::= a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z<br>&lt;digit&gt; ::= 0|1|2|3|4|5|6|7|8|9</code> <p>In this example a variable is definied as a single letter and optionally 1-to-many digits. An example of variable in this case would be "a282".</p>
+
+<h1>Documenting Syntax</h1>
+    <p>This section will discuss the primary models for documenting the syntax of programming languages, these being ENBF and Railroad diagrams.
+    But before exploring these models we must first understand some specific terminology, which can be seen below:</p>
+    <ul>
+        <li>Terminal: a set of symbols or characters, e.g. "abc" or "123"</li>
+        <li>Non-terminal: an expression which is defined elsewhere</li>
+    </ul>
+    <h3>EBNF</h3>
+        <p>Extended Backus-Naur Form (EBNF) is a text-based notation format for describing programming language syntax and data structures.
+        The various concepts within EBNF are represented as:</p>
+        <ul>
+            <li>Terminals: value within ""</li>
+            <li>Non-terminals: named within <></li>
+            <li>Optionals: expressions within [] are optional</li>
+            <li>Repetition: expresions within {} are repeated 0-to-many times</li>
+            <li>Grouping: expressions within () are grouped together</li>
+            <li>Alternatives: expressions next to | show a choice between alternatives</li>
+            <li>Assignment: to assign an expression ::= is used</li>
+        </ul>
+        <p>To better understand these notations view the example below:</p>
+        <code>&lt;variable&gt; ::= &lt;letter&gt;[&lt;digit&gt;{&lt;digit&gt;}]<br>&lt;letter&gt; ::= a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z<br>&lt;digit&gt; ::= 0|1|2|3|4|5|6|7|8|9</code>
+        <p>In this example a variable is definied as a single letter and optionally 1-to-many digits.
+        An example of a variable in this case would be "a282".</p>
+    <h3>Railroad Diagrams</h3>
+        <p>Railroad Diagrams similarily to EBNF document the syntax of a language or data structure, however they differ in that they are visual in nature rather than text-based.
+        An image presenting the various elements of a railroad diagram can be seen below:</p>
+        <img src="img\railroad_key.png" alt="railroad diagram key">
+        <p>To better understand the nature of railroad diagrams view the examples below:</p>
+        <img src="img\SyntaxDiag1.png" alt="first syntax diagram">
+        <img src="img\SyntaxDiag2.png" alt="second syntax diagram">

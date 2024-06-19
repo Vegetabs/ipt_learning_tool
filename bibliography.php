@@ -21,7 +21,9 @@ require("header.php");
     </ul>
     <p>Implementing Software Solutions</p>
     <ul>
-        <li><a href="https://www.youtube.com/embed/1rd9TP692AM?si=vLfu2FDiOUwV2yuG">Translation Methods Video</a></li>
+        <li><a href="https://www.youtube.com/watch?v=1rd9TP692AM&ab_channel=EsotericTech">Translation Methods Video</a></li>
+        <li><a href="https://www.cs.nmsu.edu/~rth/cs/cs471/Syntax%20Module/diagrams.html">Railroad Diagram 1</a></li>
+        <li><a href="https://www.cs.nmsu.edu/~rth/cs/cs471/Syntax%20Module/diagrams.html">Railroad Diagram 2</a></li>
     </ul>
 </body>
 <?php require("footer.php");?>
