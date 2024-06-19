@@ -19,6 +19,10 @@ require("header.php");
         <li><a href="https://careerfoundry.com/en/blog/ui-design/best-storyboard-examples/">Storyboard 1</a></li>
         <li><a href="https://www.visual-paradigm.com/guide/ux-design/wireframe-vs-storyboard-vs-wireflow-vs-mockup-vs-prototyping/">Storyboard 2</a></li>
     </ul>
+    <p>Implementing Software Solutions</p>
+    <ul>
+        <li><a href="https://www.youtube.com/embed/1rd9TP692AM?si=vLfu2FDiOUwV2yuG">Translation Methods Video</a></li>
+    </ul>
 </body>
 <?php require("footer.php");?>
 </html>

@@ -43,7 +43,13 @@ IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
                 <li><a href="quiz.php?id=3">Topic Test</a></li>
             </ul>
         <li>Testing Software Solutions</li>
+            <ul>
+                <li><a href="">[Insert Page]</a></li>
+            </ul>    
         <li>Maintaining Software Solutions</li>
+            <ul>
+                <li><a href="">[Insert Page]</a></li>
+            </ul>    
         <li><a href="bibliography.php">Bibiliography</a></li>
     </ul>
     <h1>Introduction</h1>
