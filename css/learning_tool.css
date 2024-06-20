@@ -83,8 +83,9 @@ body p {
     line-height:1.5;
 }
 
-body code {
+code {
     white-space:pre;
+    font-size:15px;
 }
 
 body label {
