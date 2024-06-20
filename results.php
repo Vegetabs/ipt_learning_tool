@@ -35,12 +35,8 @@ FUNCTION check_answer($answer,$question,$conn) {
     <?php
     $q_num = 1;
     foreach ($_GET as $i) {
-        $name = array_keys($_GET)[$q_num-1];
         IF ($q_num <= 5) {
-            $answer = check_answer(strval($i),$name,$conn);
-            IF ($answer) {
-                $correct += 1;
-            }
+            $correct += strval($i);
         }
         $q_num += 1;
         // echo($_GET[strval($q_num)]);

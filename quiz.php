@@ -37,6 +37,17 @@ FUNCTION get_next_id() {
     return $a;
 }
 
+FUNCTION get_answers($question_id,$conn) {
+    $sql = "SELECT answer_content, answer_correct FROM quiz_answers WHERE question_id=$question_id";
+    $result = mysqli_query($conn,$sql);
+    $content = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        array_push($content,$row);
+    }
+    
+    return $content;
+}
+
 IF (isset($_GET["id"])) {
     $topic_id = $_GET["id"];
     $quiz_arr = create_quiz_arr($topic_id,$conn);
@@ -54,18 +65,28 @@ IF (isset($_GET["id"])) {
     // foreach ($quiz_arr as $i) {
     //     echo("$i<br>");
     // }
-    foreach ($quiz_arr as $cur_question) {
-        $a_arr = get_a_content($cur_question,$conn);
-        echo('<p>'.get_q_content($cur_question,$conn).'</p>
-        <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="1">
-        <label for="1">'.array_values($a_arr)[0].'</label><br>
-        <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="2">
-        <label for="2">'.array_values($a_arr)[1].'</label><br>
-        <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="3">
-        <label for="3">'.array_values($a_arr)[2].'</label><br>
-        <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="4">
-        <label for="4">'.array_values($a_arr)[3].'</label><br>');
-        $cur_question += 1;
+    $iterations = 0;
+    if ($iterations < 5) {
+        foreach ($quiz_arr as $cur_question) {
+            $answers = get_answers($cur_question,$conn);
+            echo('<p>'.get_q_content($cur_question,$conn).'</p>');
+            foreach ($answers as $answer) {
+                //print_r($answer);
+                $cur_id = get_next_id();
+                echo('<input type="radio" id="'.$cur_id.'" name='.$cur_question.' value="'.$answer["answer_correct"].'"><label for='.$cur_id.'>'.$answer["answer_content"].'</label><br>');
+            }
+    /*         echo('<p>'.get_q_content($cur_question,$conn).'</p>
+            <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="1">
+            <label for="1">'.array_values($a_arr)[0].'</label><br>
+            <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="2">
+            <label for="2">'.array_values($a_arr)[1].'</label><br>
+            <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="3">
+            <label for="3">'.array_values($a_arr)[2].'</label><br>
+            <input type="radio" id="'.get_next_id().'" name='.$cur_question.' value="4">
+            <label for="4">'.array_values($a_arr)[3].'</label><br>'); */
+            $iterations += 1;
+        }
+        
     }
     $topic_id = $_GET["topic_id"];
     echo('<input type="hidden" name="topic_id" value="'.$topic_id.'">');   

@@ -3,6 +3,7 @@ require("db_connect.php");
 require("session_check.php");
 require("header.php");
 $id=0;
+$conn = get_conn();
 
 FUNCTION send_q_data($conn) {
     $topic_id = $_GET["id"];
@@ -15,8 +16,19 @@ FUNCTION send_q_data($conn) {
     mysqli_query($conn,$sql);
 }
 
+FUNCTION get_quiz_prog($topic_id,$conn) {
+    $sql = "SELECT num_correct FROM user_prog WHERE topic_id=$topic_id";
+    $result = mysqli_query($conn,$sql);
+    $content = mysqli_fetch_assoc($result);
+    IF ($content["num_correct"] == "") {
+        return "0";
+    } else {
+        return $content["num_correct"];
+    }
+    
+}
+
 IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
-    $conn = get_conn();
     send_q_data($conn);
 }
 ?>
@@ -28,28 +40,28 @@ IF (isset($_GET["id"]) AND isset($_GET["num_correct"])) {
             <ul>
                 <li><a href="content.php?id=1">Defining the Problem</a></li>
                 <li><a href="content.php?id=2">Documenting the System</a></li>
-                <li><a href="quiz.php?id=1">Topic Test</a></li>
+                <li><a href="quiz.php?id=1">Topic Test <?php echo("(".get_quiz_prog(1,$conn)."/5)"); ?></a></li>
             </ul>
         <li>Planning and Designing Software Solutions</li>
             <ul>
                 <li><a href="content.php?id=3">Creating Psuedocode</a></li>
-                <li><a href="quiz.php?id=2">Topic Test</a></li>
+                <li><a href="quiz.php?id=2">Topic Test <?php echo("(".get_quiz_prog(2,$conn)."/5)"); ?></a></li>
             </ul>
         <li>Implementing Software Solutions</li>
             <ul>
                 <li><a href="content.php?id=4">Translation Methods</a></li>
                 <li><a href="content.php?id=5">Documenting Syntax</a></li>
-                <li><a href="quiz.php?id=3">Topic Test</a></li>
+                <li><a href="quiz.php?id=3">Topic Test <?php echo("(".get_quiz_prog(3,$conn)."/5)"); ?></a></li>
             </ul>
         <li>Testing Software Solutions</li>
             <ul>
                 <li><a href="content.php?id=6">Testing Methods</a></li>
-                <li><a href="quiz.php?id=4">Topic Test</a></li>
+                <li><a href="quiz.php?id=4">Topic Test <?php echo("(".get_quiz_prog(4,$conn)."/5)"); ?></a></li>
             </ul>    
         <li>Maintaining Software Solutions</li>
             <ul>
                 <li><a href="content.php?id=7">How to Maintain Software</a></li>
-                <li><a href="quiz.php?id=5">Topic Test</a></li>
+                <li><a href="quiz.php?id=5">Topic Test <?php echo("(".get_quiz_prog(5,$conn)."/5)"); ?></a></li>
             </ul>    
         <li>Misc</li>
             <ul>
